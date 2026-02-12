@@ -16,7 +16,8 @@ public class CameraFollow : MonoBehaviour
     private void LateUpdate()
     {
         // camera follow diletakkan disini biar smooth aja
-        // ngikutin ke player dengan lerp biar kecepatannya tu linear
+        // ngikutin ke player dengan lerp biar kecepatannya tu linear alias biar halus
+        // lerp itu dari cepet ke pelan
         transform.position = Vector3.Lerp(transform.position, playerTarget.position + offset, cameraSpeed * Time.deltaTime);
     }
 }
